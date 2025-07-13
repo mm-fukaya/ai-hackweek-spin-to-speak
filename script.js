@@ -241,7 +241,7 @@ class SpinToSpeak {
         const winnerText = document.querySelector('.winner-text');
         winnerText.textContent = winner;
         winnerText.style.color = '#ff6b9d';
-        winnerText.style.fontSize = '1rem';
+        winnerText.style.fontSize = '0.8rem';
         winnerText.style.textShadow = '0 0 10px rgba(255, 107, 157, 0.5)';
     }
 

@@ -164,8 +164,8 @@ header p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
     background: white;
     border-radius: 50%;
     display: flex;
@@ -185,6 +185,9 @@ header p {
     font-weight: bold;
     color: #4a5568;
     word-wrap: break-word;
+    text-align: center;
+    line-height: 1.2;
+    padding: 5px;
 }
 
 .controls {
@@ -321,8 +324,8 @@ header p {
     }
     
     .roulette-center {
-        width: 60px;
-        height: 60px;
+        width: 100px;
+        height: 100px;
     }
     
     .winner-text {
