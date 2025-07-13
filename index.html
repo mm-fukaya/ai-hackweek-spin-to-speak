@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spin to Speak</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Hackweek - Spin to Speak</h1>
+            <p>Randomly select the next presenter from your AI team!</p>
+            <div class="event-badge">AI Hackweek 2025</div>
+        </header>
+
+        <div class="main-content">
+            <!-- CSV Upload Section -->
+            <div class="upload-section">
+                <h2>📁 Upload Participants</h2>
+                <div class="file-upload">
+                    <input type="file" id="csvFile" accept=".csv" />
+                    <label for="csvFile" class="upload-btn">Choose CSV File</label>
+                </div>
+                <p class="file-info">Upload a CSV file with participant names (first column should be "name")</p>
+            </div>
+
+            <!-- Roulette Section -->
+            <div class="roulette-section" id="rouletteSection" style="display: none;">
+                <div class="roulette-container">
+                    <canvas id="rouletteCanvas" width="400" height="400"></canvas>
+                    <div class="roulette-center">
+                        <div class="winner-display" id="winnerDisplay">
+                            <span class="winner-text">Click Spin!</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button id="spinBtn" class="spin-btn">🎲 SPIN</button>
+                    <button id="resetBtn" class="reset-btn">🔄 Reset</button>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-section">
+                <h2>📋 Selection History</h2>
+                <div class="history-list" id="historyList">
+                    <p class="no-history">No selections yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <!-- Made with ❤️ using Cursor -->
+    <div class="cursor-credit">
+        <span>Made with</span>
+        <span class="cursor-icon">⚡</span>
+        <span>Cursor</span>
+    </div>
+</body>
+</html> 
