@@ -37,13 +37,20 @@ class SpinToSpeak {
     }
 
     handleFileUpload(event) {
-        const file = event.target.files[0];
+        const input = event.target;
+        const file = input.files[0];
         if (!file) return;
 
         const reader = new FileReader();
         reader.onload = (e) => {
             const csv = e.target.result;
             this.parseCSV(csv);
+
+            // Clear the input so uploading the same file again triggers
+            // the change event. This improves usability when users want to
+            // reload an updated participant list without selecting a
+            // different file first.
+            input.value = '';
         };
         reader.readAsText(file);
     }
